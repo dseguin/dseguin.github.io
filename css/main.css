@@ -1,0 +1,49 @@
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+hr {
+	border: 0em;
+	height: 2px;
+	width: 80%;
+	background-color: #256;
+}
+
+body {
+	background-color: #BEF;
+	color: #256;
+	font-family: "PT Sans", "Helvetica", "Sans";
+	font-size: 100%;
+}
+
+#all_wrapper {
+	margin: 2em auto;
+	width: 80%;
+	padding: 1em 2em;
+	background-color: #9CD;
+	border-radius: 2em;
+	box-shadow: 0em 0em 2em #256;
+}
+
+#header_wrapper {
+	text-align: center;
+	font-family: "Share Tech Mono", "monospace", "mono", "Sans";
+}
+
+#header_wrapper h1 {
+	color: #9CD;
+	font-size: 3em;
+	text-shadow: 0.05em 0.05em #256, 0em 0em 0.05em #000;
+}
+
+#header_wrapper a:hover {
+	color: #FFF;
+}
+
+#content_wrapper {
+	width: 80%;
+	margin: auto;
+	padding: 1em;
+	font-size: 1.2em;
+}
