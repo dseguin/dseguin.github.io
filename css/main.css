@@ -1,6 +1,11 @@
 a {
 	text-decoration: none;
-	color: inherit;
+	color: #482;
+}
+
+a:hover {
+	text-shadow: 0em 0em 0.2em #000;
+	color: #FFF;
 }
 
 hr {
@@ -37,7 +42,12 @@ body {
 	text-shadow: 0.05em 0.05em #256, 0em 0em 0.05em #000;
 }
 
+#header_wrapper a {
+	color: inherit;
+}
+
 #header_wrapper a:hover {
+	text-shadow: inherit;
 	color: #FFF;
 }
 
@@ -46,4 +56,36 @@ body {
 	margin: auto;
 	padding: 1em;
 	font-size: 1.2em;
+}
+
+#footer_wrapper {
+	text-align: center;
+	font-family: "Share Tech Mono", "monospace", "mono", "Sans";
+}
+
+#nav_bar {
+	margin: auto;
+	width: 80%;
+	font-size: 1.2em;
+	text-align: center;
+	background-color: #ADE;
+	border-radius: 1em;
+}
+
+#nav_bar ul {
+	list-style-type: none;
+	margin: auto;
+	padding: 0.5em;
+	overflow: hidden;
+}
+
+#nav_bar li {
+	float: center;
+	display: inline;
+	padding: 1em 2em;
+}
+
+#nav_bar li:hover {
+	background-color: #7AB;
+	text-shadow: 0em 0em 0.2em #000;
 }
