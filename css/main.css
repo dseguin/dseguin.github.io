@@ -58,6 +58,10 @@ body {
 	font-size: 1.2em;
 }
 
+#content_wrapper p {
+	padding-bottom: 1em;
+}
+
 #footer_wrapper {
 	text-align: center;
 	font-family: "Share Tech Mono", "monospace", "mono", "Sans";

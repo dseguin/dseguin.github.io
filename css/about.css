@@ -1,0 +1,12 @@
+.centered {
+	text-align: center;
+}
+
+p.centered {
+	font-family: "Share Tech Mono", "PT mono", "monospace", "mono";
+	font-style: italic;
+}
+
+p.date {
+	font-size: 80%;
+}

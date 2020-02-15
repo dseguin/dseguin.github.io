@@ -5,7 +5,7 @@
 	<title>printf(&quot;Thoughts&quot;);</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Share Tech Mono"/>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Sans"/>
-	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="/css/main.css"/>
 </head>
 <body>
 <div id="all_wrapper">
@@ -15,16 +15,17 @@
 		<p>Adventures in C, Linux, and open source</p>
 		<div id="nav_bar">
 			<ul>
-				<a><li>Home</li></a>
-				<a><li>Projects</li></a>
-				<a><li>Blog</li></a>
-				<a><li>About</li></a>
+				<a href="/"><li>Home</li></a>
+				<a href="/projects/"><li>Projects</li></a>
+				<a href="/blog/"><li>Blog</li></a>
+				<a href="/about.html"><li>About</li></a>
 			</ul>
 		</div><!--nav_bar-->
 	</div><!--header_wrapper-->
 	<hr/>
 	<!--CONTENT-->
 	<div id="content_wrapper">
+		<p>Oops, this page is not ready yet!</p>
 	</div><!--content_wrapper-->
 </div><!--all_wrapper-->
 <div id="footer_wrapper">
