@@ -1,0 +1,27 @@
+#content_wrapper table {
+	width: 80%;
+	margin: auto;
+	font-size: 100%;
+	padding: 0;
+	border-collapse: collapse;
+}
+
+#content_wrapper tr:nth-child(odd) {
+	background-color: #ADE;
+}
+
+#content_wrapper th {
+	text-align: center;
+	font-family: "Share Tech Mono", "monospace", "mono", "sans";
+	background-color: #256;
+	color: #ADE;
+	padding: 0.5em;
+}
+
+#content_wrapper td {
+	padding: 0.5em;
+}
+
+#content_wrapper td:nth-child(odd) {
+	width: 0;
+}

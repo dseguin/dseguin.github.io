@@ -10,3 +10,27 @@ p.centered {
 p.date {
 	font-size: 80%;
 }
+
+#content_wrapper table {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	background-color: #BEF;
+	padding: 0.5em;
+	border-radius: 1em;
+	border-collapse: collapse;
+}
+
+#content_wrapper tr:nth-child(even) {
+	background-color: #9CD;
+}
+
+#content_wrapper th {
+	border-bottom: 2px solid #256;
+	font-size: 1.2em;
+}
+
+#content_wrapper .divider {
+	background-color: #256;
+	padding: 1px;
+}
