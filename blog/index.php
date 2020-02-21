@@ -29,7 +29,7 @@ function dump_posts() {
 			<ul>
 				<a href="/"><li>Home</li></a>
 				<a href="/projects/"><li>Projects</li></a>
-				<a href="/blog/"><li>Blog</li></a>
+				<a href="/blog/index.php"><li>Blog</li></a>
 				<a href="/about.html"><li>About</li></a>
 			</ul>
 		</div><!--nav_bar-->

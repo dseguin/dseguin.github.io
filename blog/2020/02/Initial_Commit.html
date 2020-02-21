@@ -17,7 +17,7 @@
 			<ul>
 				<a href="/"><li>Home</li></a>
 				<a href="/projects/"><li>Projects</li></a>
-				<a href="/blog/"><li>Blog</li></a>
+				<a href="/blog/index.php"><li>Blog</li></a>
 				<a href="/about.html"><li>About</li></a>
 			</ul>
 		</div><!--nav_bar-->
@@ -27,7 +27,7 @@
 	<div id="content_wrapper">
 		<h1 class="post_title">Dynamically listing page titles with PHP</h1>
 		<p>I'm new to PHP, so this is pretty exciting to me.</p>
-		<p>I needed a way to dynamically list blog pages for <a href="/blog/">my blog index</a>, but I want to avoid using javascript where possible. The solution was to find all files in the blog directory tree, sort them by creation time, and extract the page title. This can all be done in PHP.</p>
+		<p>I needed a way to dynamically list blog pages for <a href="/blog/index.php">my blog index</a>, but I want to avoid using javascript where possible. The solution was to find all files in the blog directory tree, sort them by creation time, and extract the page title. This can all be done in PHP.</p>
 		<blockquote>
 		<code>
 			$files = glob("*/*/*.html");<br>
