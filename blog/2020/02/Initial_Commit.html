@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>printf(&quot;Thoughts&quot;);</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Share Tech Mono"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Sans"/>
+	<link rel="stylesheet" href="/css/main.css"/>
+</head>
+<body>
+<div id="all_wrapper">
+	<!--HEADER-->
+	<div id="header_wrapper">
+		<h1><a href="https://www.printf.ca/">printf(&quot;Thoughts&quot;);</a></h1>
+		<p>Adventures in C, Linux, and open source</p>
+		<div id="nav_bar">
+			<ul>
+				<a href="/"><li>Home</li></a>
+				<a href="/projects/"><li>Projects</li></a>
+				<a href="/blog/"><li>Blog</li></a>
+				<a href="/about.html"><li>About</li></a>
+			</ul>
+		</div><!--nav_bar-->
+	</div><!--header_wrapper-->
+	<hr/>
+	<!--CONTENT-->
+	<div id="content_wrapper">
+		<h1 class="post_title">Dynamically listing page titles with PHP</h1>
+		<p>I'm new to PHP, so this is pretty exciting to me.</p>
+		<p>I needed a way to dynamically list blog pages for <a href="/blog/">my blog index</a>, but I want to avoid using javascript where possible. The solution was to find all files in the blog directory tree, sort them by creation time, and extract the page title. This can all be done in PHP.</p>
+		<blockquote>
+		<code>
+			$files = glob("*/*/*.html");<br>
+			array_multisort(array_map('filectime', $files), SORT_NUMERIC, SORT_DESC, $files);<br>
+			for($i=0;$i&lt;count($files);$i++) {<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;$f = file_get_contents($files[$i]);<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;if(!$f) continue;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;if(!preg_match("/&lt;h1 class=\"post_title\"&gt;(.*)&lt;\/h1&gt;/siU", $f, $match)) continue;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;echo "&lt;tr&gt;&lt;td&gt;" . date('Y-m-d', filectime($files[$i])) . "&lt;/td&gt;&lt;td&gt;&lt;a href=\"" . $files[$i] . "\"&gt;" . trim($match[1]) . "&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;";<br>
+			}<br>
+		</code>
+		</blockquote>
+		<p>All html files in the blog directory tree are fetched using <code>glob()</code> and sorted by change/creation time using <code>array_multisort()</code> and <code>filectime()</code>. The contents of each file are searched for a specific tag <code>(&lt;h1 class="post_title"&gt;)</code>, which is used as the title to display in the blog index. A table row is then printed using the file change/creation time and the post title.</p>
+		<p>Since GitHub Pages only supports static pages, the PHP page is just used to generate the corresponding HTML page.</p>
+		<h3>Sources</h3>
+		<p><a href="https://stackoverflow.com/questions/1785039/find-oldest-file-in-a-folder-using-php">Find oldest file in a folder using PHP - StackOverflow</a></p>
+	</div><!--content_wrapper-->
+</div><!--all_wrapper-->
+<div id="footer_wrapper">
+	<p>David Seguin on <a href="https://github.com/dseguin">Github</a></p>
+</div><!--footer_wrapper-->
+</body>
+</html>

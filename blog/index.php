@@ -1,3 +1,15 @@
+<?php
+function dump_posts() {
+	$files = glob("*/*/*.html");
+	array_multisort(array_map('filectime', $files), SORT_NUMERIC, SORT_DESC, $files);
+	for($i=0;$i<count($files);$i++) {
+		$f = file_get_contents($files[$i]);
+		if(!$f) continue;
+		if(!preg_match("/<h1 class=\"post_title\">(.*)<\/h1>/siU", $f, $match)) continue;
+		echo "<tr><td>" . date('Y-m-d', filectime($files[$i])) . "</td><td><a href=\"" . $files[$i] . "\">" . trim($match[1]) . "</a></td></tr>";
+	}
+}
+?>
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
@@ -28,7 +40,10 @@
 		<h1>Thoughts</h1>
 		<table>
 		<tr><th>Date</th><th>Title</th></tr>
-		<tr><td>2020-02-20</td><td><a href="2020/02/Initial_Commit.html">Dynamically listing page titles with PHP</a></td></tr>		</table>
+		<?php
+			dump_posts();
+		?>
+		</table>
 	</div><!--content_wrapper-->
 </div><!--all_wrapper-->
 <div id="footer_wrapper">
