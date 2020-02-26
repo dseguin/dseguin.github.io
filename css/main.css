@@ -63,6 +63,7 @@ blockquote {
 	margin: auto;
 	padding: 1em;
 	font-size: 1.2em;
+	overflow: hidden;
 }
 
 #content_wrapper p {
@@ -99,4 +100,68 @@ blockquote {
 #nav_bar li:hover {
 	background-color: #7AB;
 	text-shadow: 0em 0em 0.2em #000;
+}
+
+#left_wrapper {
+	float: left;
+	width: 60%;
+	overflow: hidden;
+}
+
+#right_wrapper {
+	float: left;
+	width: 40%;
+	overflow: hidden;
+	background-color: #ADE;
+	border-radius: 2em;
+}
+
+#right_wrapper hr {
+	width: 50%;
+}
+
+#right_wrapper h3 {
+	text-align: center;
+}
+
+#right_wrapper p {
+	text-align: justify;
+	padding: 0 2em;
+}
+
+#left_wrapper h3 {
+	text-align: center;
+}
+
+#left_wrapper > .date {
+	padding: 0;
+	font-size: 0.8em;
+	font-family: "Share Tech Mono", "monospace", "mono", "Sans";
+}
+
+#left_wrapper > p {
+	text-align: center;
+}
+
+#post_wrapper {
+	position: relative;
+	padding: 0 2em;
+	font-size: 80%;
+	max-height: 10em;
+	overflow: hidden;
+}
+
+#post_wrapper > .gradient_overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	margin: 0;
+	padding: 2em 0 0;
+	background-image: -webkit-linear-gradient(to bottom, transparent, #9CD, #9CD);
+	background-image: -moz-linear-gradient(to bottom, transparent, #9CD, #9CD);
+	background-image: -ms-linear-gradient(to bottom, transparent, #9CD, #9CD);
+	background-image: -o-linear-gradient(to bottom, transparent, #9CD, #9CD);
+	background-image: linear-gradient(to bottom, transparent, #9CD, #9CD);
 }
