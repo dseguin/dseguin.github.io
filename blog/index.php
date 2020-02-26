@@ -18,6 +18,7 @@ function dump_posts() {
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Sans"/>
 	<link rel="stylesheet" href="/css/main.css"/>
 	<link rel="stylesheet" href="/css/blog_index.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
 <div id="all_wrapper">

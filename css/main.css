@@ -165,3 +165,12 @@ blockquote {
 	background-image: -o-linear-gradient(to bottom, transparent, #9CD, #9CD);
 	background-image: linear-gradient(to bottom, transparent, #9CD, #9CD);
 }
+
+@media screen and (max-width: 62em) {
+	body {
+		font-size: 1.5vw;
+	}
+	#left_wrapper, #right_wrapper {
+		width: 100%;
+	}
+}

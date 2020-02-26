@@ -25,6 +25,7 @@ function get_latest_post() {
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Share Tech Mono"/>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Sans"/>
 	<link rel="stylesheet" href="/css/main.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
 <div id="all_wrapper">
