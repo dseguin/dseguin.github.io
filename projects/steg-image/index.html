@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Share Tech Mono"/>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Sans"/>
 	<link rel="stylesheet" href="/css/main.css"/>
+	<link rel="stylesheet" href="/css/projects.css"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
@@ -26,7 +27,35 @@
 	<hr/>
 	<!--CONTENT-->
 	<div id="content_wrapper">
-		<p>Oops, this page is not ready yet!</p>
+		<h1>Steg-Image</h1>
+		<table class="project_links">
+			<tr>
+				<td><a href="https://github.com/dseguin/steg-image">Source - GitHub</a></td>
+				<td><a href="https://github.com/dseguin/steg-image/blob/master/LICENSE">License - MIT</a></td>
+			</tr>
+		</table>
+		<p>There are countless ways to obfuscate data, some specifically apply to embedding data in images. This method uses <a href="https://en.wikipedia.org/wiki/Steganography">steganography</a>, which involves storing data inside the color information (pixels) of images.</p>
+		<figure>
+			<img alt="public domain image containing a hidden message" src="/images/demo_img_400_e.png"/>
+			<figcaption>This image contains a hidden message (from <a href="https://www.pexels.com/photo/green-mountains-under-white-clouds-3646213/">pexels.com</a>)</figcaption>
+		</figure>
+		<p>If you run <code class="code_inline">steg-image -d -i demo_img_400_e.png</code> for the above image, you'll get a text string reading "Hello World!"</p>
+		<p>The technique I'm using here is replacing the 2 least significant bits per byte of each color channel with the data I want to embed. Essentially, if you have a image with four 8-bit color channels (RGBA), you can store 1 byte of data per pixel. I chose to only use 2 LSB to avoid noticeably changing how the image looks visually.<br><a href="https://github.com/dseguin/steg-image/blob/master/README.md#usage">More details about how it works &#8594;</a></p>
+		<p class="list_desc">While this is really cool, there are several disadvantages that make steganography impractical:</p>
+		<ul>
+			<li>Only possible with lossless formats (i.e. PNG)</li>
+			<li>Any kind of image manipulation will corrupt embedded data</li>
+			<li>Most image hosting platforms perform some image optimization, which also corrupts embedded data</li>
+		</ul>
+		<br>
+		<p class="list_desc">Despite the fragility of the embedded data, there are a few reasons you might use steganography:</p>
+		<ul>
+			<li>Most image tools search for information in metadata, not in the actual image data</li>
+			<li>Theoretically, steganography doesn't change the file size of an image (in this case, I'm using an inefficient compression library, so the steganographied image will be larger)</li>
+			<li>It's cool!</li>
+		</ul>
+		<br>
+		<h4 style="text-align:center;"><a href="https://github.com/dseguin/steg-image/blob/master/README.md#compiling">Compile it and try it out for yourself</a></h4>
 	</div><!--content_wrapper-->
 </div><!--all_wrapper-->
 <div id="footer_wrapper">

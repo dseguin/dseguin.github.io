@@ -168,7 +168,16 @@ blockquote {
 
 @media screen and (max-width: 62em) {
 	body {
-		font-size: 1.5vw;
+		font-size: 2.5vw;
+	}
+	#all_wrapper {
+		width: 100%;
+		margin: 0;
+		padding: 0.5em;
+		overflow: auto;
+	}
+	#nav_bar li {
+		padding: 1em;
 	}
 	#left_wrapper, #right_wrapper {
 		width: 100%;
