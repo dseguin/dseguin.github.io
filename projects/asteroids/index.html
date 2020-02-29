@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Share Tech Mono"/>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Sans"/>
 	<link rel="stylesheet" href="/css/main.css"/>
+	<link rel="stylesheet" href="/css/projects.css"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
@@ -26,7 +27,33 @@
 	<hr/>
 	<!--CONTENT-->
 	<div id="content_wrapper">
-		<p>Oops, this page is not ready yet!</p>
+		<h1>Simple Asteroids</h1>
+		<table class="project_links">
+			<tr>
+				<td><a href="https://github.com/dseguin/asteroids/releases/download/v1.5.2/asteroids_1.5.2_windows64.zip">Download for Windows</a></td>
+				<td><a href="https://github.com/dseguin/asteroids/releases/download/v1.5.2/asteroids_1.5.2_linux64_debian.tar.gz">Download for Linux</a></td>
+			</tr>
+		</table>
+		<br>
+		<table class="project_links">
+			<tr>
+				<td><a href="https://github.com/dseguin/asteroids">Source - GitHub</a></td>
+                                <td><a href="https://github.com/dseguin/asteroids/blob/stable/src/asteroids.c#L8">License - MIT</a></td>
+			</tr>
+		</table>
+		<p>A simple clone of the old Asteroids arcade game, written entirely in ANSI C. The game uses an OpenGL renderer through <a href="https://www.libsdl.org">SDL</a>.</p>
+		<figure>
+			<img alt="screenshot of the game" src="/images/asteroids_800.png"/>
+			<figcaption>Visually distinct from the <a href="https://upload.wikimedia.org/wikipedia/en/1/13/Asteroi1.png">original</a></figcaption>
+		</figure>
+		<p>The collision physics are very rudimentary. There is some conservation of momentum, but asteroids just bounce back in the opposite direction they came from.</p>
+		<p>The game contains a basic audio synthesizer that generates the sound effects. The generated audio is 8-bit unsigned and sampled at 8KHz.</p>
+		<p>Upon running the game, it generates a configuration file called <code class="code_inline">'asteroids.conf'</code> that sits in the same directory as the program. This configuration file contains a number of ways to tweak the game. These options can also be defined on the command line (use <code class="code_inline">./asteroids -h</code> for more info).</p>
+		<p>Among these options is a 2-player mode. For the sake of simplicity, both players use the same keyboard. Keybindings are configurable in the configuration file.</p>
+		<figure>
+			<img alt="screenshot of 2-player mode" src="/images/asteroids_800_2.png"/>
+			<figcaption>Player 1 collides with an asteroid</figcaption>
+		</figure>
 	</div><!--content_wrapper-->
 </div><!--all_wrapper-->
 <div id="footer_wrapper">

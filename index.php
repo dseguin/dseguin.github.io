@@ -1,7 +1,7 @@
 <?php
 function print_post($file, $title, $content) {
 	echo "<h3><a href=\"" . $file . "\">$title</a></h3>";
-	echo "<p class=\"date\">" . date('Y-m-d', filectime($file)) . "</p>";
+	echo "<p class=\"date\">" . date('F j, Y', filectime($file)) . "</p>";
 	echo "<div id=\"post_wrapper\">" . $content . "<p class=\"gradient_overlay\"><a href=\"" . $file . "\">Read full post &#8594;</a></p></div>";
 }
 function get_latest_post() {

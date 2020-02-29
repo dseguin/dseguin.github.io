@@ -70,6 +70,12 @@ blockquote {
 	padding-bottom: 1em;
 }
 
+#content_wrapper p.date {
+	padding: 0;
+	font-size: 0.8em;
+	font-family: "Share Tech Mono", "monospace", "mono", "Sans";
+}
+
 #footer_wrapper {
 	text-align: center;
 	font-family: "Share Tech Mono", "monospace", "mono", "Sans";
@@ -131,12 +137,6 @@ blockquote {
 
 #left_wrapper h3 {
 	text-align: center;
-}
-
-#left_wrapper > .date {
-	padding: 0;
-	font-size: 0.8em;
-	font-family: "Share Tech Mono", "monospace", "mono", "Sans";
 }
 
 #left_wrapper > p {
