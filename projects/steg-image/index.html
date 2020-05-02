@@ -39,8 +39,8 @@
 			<img alt="public domain image containing a hidden message" src="/images/demo_img_400_e.png"/>
 			<figcaption>This image contains a hidden message (from <a href="https://www.pexels.com/photo/green-mountains-under-white-clouds-3646213/">pexels.com</a>)</figcaption>
 		</figure>
-		<p>If you run <code class="code_inline">steg-image -d -i demo_img_400_e.png</code> for the above image, you'll get a text string reading "Hello World!"</p>
-		<p>The technique I'm using here is replacing the 2 least significant bits per byte of each color channel with the data I want to embed. Essentially, if you have an image with four 8-bit color channels (RGBA), you can store 1 byte of data per pixel. I chose to only use 2 LSB to avoid noticeably changing how the image looks visually.<br><a href="https://github.com/dseguin/steg-image/blob/master/README.md#usage">More details about how it works &#8594;</a></p>
+		<p>If you run <code class="code_inline">steg-run -d -i demo_img_400_e.png</code> for the above image, you'll get a text string reading "Hello World!"</p>
+		<p>The technique I'm using here is replacing the N least significant bits (where 1 &#8804; N &#8804; 8) per byte of each color channel with the data I want to embed. Essentially, if you have an image with four 8-bit color channels (RGBA), you can store (N/2) bytes of data per pixel. Using more bits increases the storage capacity of the image, at the cost of noticeably changing how the image looks visually.<br><a href="https://github.com/dseguin/steg-image/blob/master/README.md#usage">More details about how it works &#8594;</a></p>
 		<p class="list_desc">While this is really cool, there are several disadvantages that make steganography impractical:</p>
 		<ul>
 			<li>Only possible with lossless formats (i.e. PNG)</li>
@@ -50,7 +50,7 @@
 		<br>
 		<p class="list_desc">Despite the fragility of the embedded data, there are a few reasons you might use steganography:</p>
 		<ul>
-			<li>Most image tools search for information in metadata, not in the actual image data</li>
+			<li>Most image tools look at metadata and don't expect encoded data in the actual color information</li>
 			<li>Theoretically, steganography doesn't change the file size of an image (in this case, I'm using an inefficient compression library, so the steganographied image will be larger)</li>
 			<li>It's cool!</li>
 		</ul>
